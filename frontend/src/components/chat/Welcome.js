@@ -1,4 +1,5 @@
 import { WelcomeSVG } from "../../utils/WelcomeSVG";
+import React, { Component }  from 'react';
 
 export default function Welcome() {
   return (
@@ -6,7 +7,7 @@ export default function Welcome() {
       <div className="pl-5">
         <WelcomeSVG />
         <div className="text-center">
-          <h2 className="text-xl text-gray-500 dark:text-gray-400">
+          <h2 className="text-xl text-red-500 dark:text-gray-400">
             Select a Chat to Start Messaging
           </h2>
         </div>

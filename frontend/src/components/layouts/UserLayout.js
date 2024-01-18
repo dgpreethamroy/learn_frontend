@@ -1,3 +1,5 @@
+import React, { Component }  from 'react';
+
 export default function UserLayout({ user, onlineUsersId }) {
   return (
     <div className="relative flex items-center">

@@ -1,4 +1,5 @@
 import { format } from "timeago.js";
+import React, { Component }  from 'react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

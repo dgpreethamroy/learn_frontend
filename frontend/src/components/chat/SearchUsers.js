@@ -1,4 +1,5 @@
 import { SearchIcon } from "@heroicons/react/solid";
+import React, { Component }  from 'react';
 
 export default function SearchUsers({ handleSearch }) {
   return (

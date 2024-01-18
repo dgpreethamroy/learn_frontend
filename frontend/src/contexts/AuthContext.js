@@ -1,4 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import React from "react";
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -36,12 +38,17 @@ export function AuthProvider({ children }) {
   }
 
   useEffect(() => {
+    console.log("1st Use effect");
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
       setLoading(false);
+      console.log("1st Use effect returned");
     });
 
     return unsubscribe;
+  }, []);
+  useEffect(() => {
+    console.log("2nd Use effect");
   }, []);
 
   const value = {

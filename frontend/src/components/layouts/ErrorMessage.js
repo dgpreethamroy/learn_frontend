@@ -1,4 +1,5 @@
 import { XCircleIcon } from "@heroicons/react/solid";
+import React, { Component }  from 'react';
 
 import { useAuth } from "../../contexts/AuthContext";
 

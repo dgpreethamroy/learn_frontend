@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import React, { Component }  from 'react';
 
 import { useAuth } from "../../contexts/AuthContext";
 import { generateAvatar } from "../../utils/GenerateAvatar";

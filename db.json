@@ -1,0 +1,74 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "content": "HTML is easy",
+      "important": true
+    },
+    {
+      "id": "2",
+      "content": "Browser can execute only JavaScript",
+      "important": false
+    },
+    {
+      "id": "3",
+      "content": "GET and POST are the most important methods of HTTP protocol",
+      "important": true
+    },
+    {
+      "id": "4",
+      "content": "New Note",
+      "important": false
+    },
+    {
+      "id": "5",
+      "content": "New Note",
+      "important": false
+    },
+    {
+      "id": "6",
+      "content": "New Note",
+      "important": false
+    },
+    {
+      "id": "7",
+      "content": "graph key recall shout therefore",
+      "important": false
+    },
+    {
+      "id": "8",
+      "content": "friend jungle elephant herd sleep",
+      "important": false
+    },
+    {
+      "id": "9",
+      "content": "worth product pool military my",
+      "important": true
+    },
+    {
+      "id": "10",
+      "content": "forgot whom consist blew hunter",
+      "important": true
+    },
+    {
+      "id": "11",
+      "content": "electricity disappear face pick serve",
+      "important": false
+    },
+    {
+      "id": "12",
+      "content": "stared oxygen noted shot bear",
+      "important": true
+    },
+    {
+      "id": "13",
+      "content": "solution operation pack such replace",
+      "important": false
+    },
+    {
+      "id": "14",
+      "content": "also directly window pattern unusual",
+      "important": true
+    }
+  ]
+}

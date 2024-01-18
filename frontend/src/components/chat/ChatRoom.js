@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import React, { Component }  from 'react';
 
 import { getMessagesOfChatRoom, sendMessage } from "../../services/ChatService";
 
@@ -22,18 +23,18 @@ export default function ChatRoom({ currentChat, currentUser, socket }) {
   }, [currentChat._id]);
 
   useEffect(() => {
-    scrollRef.current?.scrollIntoView({
+    void(scrollRef.current?.scrollIntoView({
       behavior: "smooth",
-    });
+    }));
   }, [messages]);
 
   useEffect(() => {
-    socket.current?.on("getMessage", (data) => {
+    void(socket.current?.on("getMessage", (data) => {
       setIncomingMessage({
         senderId: data.senderId,
         message: data.message,
       });
-    });
+    }));
   }, [socket]);
 
   useEffect(() => {

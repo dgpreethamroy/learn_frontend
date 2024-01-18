@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React, { Component }  from 'react';
 
 import { getUser } from "../../services/ChatService";
 import UserLayout from "../layouts/UserLayout";

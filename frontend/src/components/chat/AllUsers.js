@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React, { Component }  from 'react';
 
 import { createChatRoom } from "../../services/ChatService";
 import Contact from "./Contact";

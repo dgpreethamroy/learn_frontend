@@ -1,6 +1,7 @@
 import { LogoutIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import React  from 'react';
 
 import { useAuth } from "../../contexts/AuthContext";
 import Logout from "../accounts/Logout";

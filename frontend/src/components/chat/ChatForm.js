@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import React, { Component }  from 'react';
 
 import { PaperAirplaneIcon } from "@heroicons/react/solid";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
@@ -10,8 +11,11 @@ export default function ChatForm(props) {
 
   const scrollRef = useRef();
 
+  // useEffect(() => {
+  //   scrollRef.current?.scrollIntoView();
+  // }, [showEmojiPicker]);
   useEffect(() => {
-    scrollRef.current?.scrollIntoView();
+    void (scrollRef.current?.scrollIntoView());
   }, [showEmojiPicker]);
 
   const handleEmojiClick = (event, emojiObject) => {
