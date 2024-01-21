@@ -1,7 +1,7 @@
 import ChatMessage from "../models/ChatMessage.js";
 
 export const createMessage = async (req, res) => {
-  const newMessage = new ChatMessage(req.body);
+  
 
   try {
        const data = JSON.stringify({
@@ -17,6 +17,7 @@ export const createMessage = async (req, res) => {
     });
     const result = await response.text();
     req.body["check"] = result;
+    const newMessage = new ChatMessage(req.body);
     await newMessage.save();
     res.status(201).json(newMessage);
   } catch (error) {
