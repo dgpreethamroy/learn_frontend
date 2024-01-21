@@ -6,6 +6,14 @@ function classNames(...classes) {
 }
 
 export default function Message({ message, self }) {
+    let color = "";
+  if (message.check == "No Hate and Offensive") {
+    color = "btn_white";
+  } else if (message.check == "Hate Speech") {
+    color = "btn_white_text";
+  } else {
+    color = "btn_white_textr";
+  }
   return (
     <>
       <li
