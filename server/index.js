@@ -55,12 +55,13 @@ io.on("connection", (socket) => {
     socket.emit("getUsers", Array.from(onlineUsers));
   });
 
-  socket.on("sendMessage", ({ senderId, receiverId, message }) => {
+  socket.on("sendMessage", ({ senderId, receiverId, message ,check }) => {
     const sendUserSocket = onlineUsers.get(receiverId);
     if (sendUserSocket) {
       socket.to(sendUserSocket).emit("getMessage", {
         senderId,
         message,
+        check,
       });
     }
   });
