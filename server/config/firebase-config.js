@@ -1,7 +1,8 @@
 import { initializeApp, cert } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
-
-import serviceAccountKey from "./serviceAccountKey.json" assert { type: "json" };
+import dotenv from "dotenv";
+dotenv.config();
+const serviceAccountKey = JSON.parse(process.env.Fkey);
 
 const app = initializeApp({
   credential: cert(serviceAccountKey),
