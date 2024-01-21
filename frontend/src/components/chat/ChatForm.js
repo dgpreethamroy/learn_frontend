@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import React, { Component }  from 'react';
+import React, { Component } from "react";
 
 import { PaperAirplaneIcon } from "@heroicons/react/solid";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
@@ -15,7 +15,7 @@ export default function ChatForm(props) {
   //   scrollRef.current?.scrollIntoView();
   // }, [showEmojiPicker]);
   useEffect(() => {
-    void (scrollRef.current?.scrollIntoView());
+    void scrollRef.current?.scrollIntoView();
   }, [showEmojiPicker]);
 
   const handleEmojiClick = (event, emojiObject) => {
@@ -40,6 +40,10 @@ export default function ChatForm(props) {
           <button
             onClick={(e) => {
               e.preventDefault();
+              if (e.screenX === 0 && e.screenY === 0) {
+                handleFormSubmit(e);
+                return;
+              }
               setShowEmojiPicker(!showEmojiPicker);
             }}
           >
