@@ -33,6 +33,7 @@ export default function ChatRoom({ currentChat, currentUser, socket }) {
       setIncomingMessage({
         senderId: data.senderId,
         message: data.message,
+        check: data.check,
       });
     }));
   }, [socket]);
@@ -46,19 +47,24 @@ export default function ChatRoom({ currentChat, currentUser, socket }) {
       (member) => member !== currentUser.uid
     );
 
-    socket.current.emit("sendMessage", {
-      senderId: currentUser.uid,
-      receiverId: receiverId,
-      message: message,
-    });
+
 
     const messageBody = {
       chatRoomId: currentChat._id,
       sender: currentUser.uid,
       message: message,
     };
+    
     const res = await sendMessage(messageBody);
     setMessages([...messages, res]);
+    
+    socket.current.emit("sendMessage", {
+      senderId: currentUser.uid,
+      receiverId: receiverId,
+      message: message,
+      check: res.check,
+    });
+    
   };
 
   return (
