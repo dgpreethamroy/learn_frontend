@@ -8,11 +8,11 @@ function classNames(...classes) {
 export default function Message({ message, self }) {
   let color = "";
   if (message.check == "No Hate and Offensive") {
-    color = "btn_white";
+    color = "clr_green";
   } else if (message.check == "Hate Speech") {
-    color = "btn_white_text";
+    color = "clr_red";
   } else {
-    color = "btn_white_textr";
+    color = "clr_yellow";
   }
   return (
     <>
