@@ -2,7 +2,7 @@ import ChatMessage from "../models/ChatMessage.js";
 
 export const createMessage = async (req, res) => {
   
-
+const pyserver = "https://pyserv-zv1x.onrender.com/predict";
   try {
        const data = JSON.stringify({
       Query: req.body.message,
