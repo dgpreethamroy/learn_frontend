@@ -31,3 +31,14 @@
       @apply bg-white dark:bg-gray-900;
     }
   }
+  @layer utilities {
+    .btn_white { 
+      @apply  text-green-500
+    }
+    .btn_white_text  { 
+      @apply  text-red-500
+    }
+    .btn_white_textr  { 
+      @apply text-yellow-500
+    }
+  }
