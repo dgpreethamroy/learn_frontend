@@ -4,6 +4,19 @@ export const createMessage = async (req, res) => {
   const newMessage = new ChatMessage(req.body);
 
   try {
+       const data = JSON.stringify({
+      Query: req.body.message,
+    });
+
+    const response = await fetch(pyserver, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: data,
+    });
+    const result = await response.text();
+    req.body["check"] = result;
     await newMessage.save();
     res.status(201).json(newMessage);
   } catch (error) {
