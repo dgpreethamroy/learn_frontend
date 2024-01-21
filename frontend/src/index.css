@@ -32,13 +32,13 @@
     }
   }
   @layer utilities {
-    .btn_white { 
+    .clr-green { 
       @apply  text-green-500
     }
-    .btn_white_text  { 
+    .clr-red  { 
       @apply  text-red-500
     }
-    .btn_white_textr  { 
+    .clr-yellow  { 
       @apply text-yellow-500
     }
   }
